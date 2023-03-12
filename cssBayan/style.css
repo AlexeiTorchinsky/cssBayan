@@ -16,10 +16,24 @@ input {
 label {
   font-size: 1.5rem;
   font-weight: 700;
+  color: blue;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 }
+label > span {
+  opacity: 0;
+}
+.wrapper:hover label {
+  color: black;
+
+}
+.wrapper:hover label span{
+  opacity: 1;
+
+}
+
 .icon-plus {
   width: 2rem;
   height: 2rem;
@@ -28,20 +42,30 @@ label {
 .meme-img {
   display: block;
   margin: 0 auto;
+  width: 100%;
 
 }
 .meme-img-container {
   height: 0;
   overflow: hidden;
   transition: all 0.3s ease;
+  max-width: 32rem;
+}
+.meme-img-container-last {
+  margin-bottom: 2rem;
+}
+input:checked +  label {
+  color: black;
 }
 input:checked +  label > span {
   transform: rotate(-45deg);
   transition-duration: 0.3s;
+  opacity: 1;
 }
 input:checked + label + .meme-img-container {
   height: auto;
   padding: 20px 0 0;
 }
+
 
 
