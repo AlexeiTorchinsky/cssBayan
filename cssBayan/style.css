@@ -25,6 +25,7 @@ label {
   padding-bottom: 1.5rem;
 
 }
+
 label > span {
   opacity: 0;
 }
@@ -54,12 +55,13 @@ input:checked +  label {
 }
 input:checked + label > span {
   transform: rotate(-45deg);
-  transition-duration: 0.3s;
+  transition: transform 0.3s;
   opacity: 1;
   }
 input:checked + label {
   border-bottom: none;
 }
+
 input:checked + label + .meme-img-container{
 height: auto;
 padding: 20px 0 0;
@@ -73,10 +75,15 @@ padding: 20px 0 0;
   .wrapper:hover label span{
     opacity: 1;
   }
+  .wrapper:hover label:active {
+    color: blue;
+  }
+  .wrapper:hover label:active > span {
+    fill: blue;
+  }
   label:hover {
     border-bottom: none;
   }
-
   input:checked +  label > span,
   label:hover > span {
   transform: rotate(-45deg);
