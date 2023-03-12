@@ -48,7 +48,7 @@ label > span {
   max-width: 32rem;
 }
 .meme-img-container-last {
-  margin-bottom: 5rem;
+  margin-bottom: 32rem;
 }
 input:checked +  label {
   color: black;
