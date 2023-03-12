@@ -29,15 +29,6 @@ label > span {
   opacity: 0;
 }
 
-.wrapper:hover label {
-  color: black;
-
-}
-.wrapper:hover label span{
-  opacity: 1;
-
-}
-
 .icon-plus {
   width: 2rem;
   height: 2rem;
@@ -56,22 +47,73 @@ label > span {
   max-width: 32rem;
 }
 .meme-img-container-last {
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 input:checked +  label {
   color: black;
 }
-input:checked +  label > span,
-label:hover > span {
+input:checked + label > span {
   transform: rotate(-45deg);
   transition-duration: 0.3s;
   opacity: 1;
+  }
+input:checked + label {
+  border-bottom: none;
 }
-input:checked + label + .meme-img-container,
-label:hover + div {
-  height: auto;
-  padding: 20px 0 0;
+input:checked + label + .meme-img-container{
+height: auto;
+padding: 20px 0 0;
 }
 
+@media screen and (min-width: 820px) {
+  .wrapper:hover label {
+    color: black;
+    cursor: pointer;
+  }
+  .wrapper:hover label span{
+    opacity: 1;
+  }
+  label:hover {
+    border-bottom: none;
+  }
+
+  input:checked +  label > span,
+  label:hover > span {
+  transform: rotate(-45deg);
+  transition-duration: 0.3s;
+  opacity: 1;
+  }
+  input:checked + label + .meme-img-container,
+  label:hover + div {
+  height: auto;
+  padding: 20px 0 0;
+  cursor: pointer;
+  }
+}
+@media screen and (max-width: 819px) {
+  h1 {
+    font-size: 1.875rem;
+  }
+  label {
+    font-size: 1.2rem;
+  }
+  .icon-plus {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+@media screen and (max-width: 530px){
+  .wrapper {
+    padding: 0 0.7rem;
+  }
+}
+@media screen and (max-width: 320px){
+  h1 {
+    font-size: 1.5rem;
+  }
+  label {
+    font-size: 1rem;
+  }
+}
 
 
