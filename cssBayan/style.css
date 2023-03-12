@@ -10,26 +10,38 @@ body {
   max-width: 32rem;
   margin: 0 auto;
 }
-
+input {
+  display: none;
+}
+label {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .icon-plus {
-  display: block;
   width: 2rem;
   height: 2rem;
 }
 
-
-.meme-row {
-  display: flex;
-  justify-content: space-between;
-}
 .meme-img {
   display: block;
   margin: 0 auto;
+
+}
+.meme-img-container {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+input:checked +  label > span {
+  transform: rotate(-45deg);
+  transition-duration: 0.3s;
+}
+input:checked + label + .meme-img-container {
+  height: auto;
+  padding: 20px 0 0;
 }
 
-details > summary {
-  list-style: none;
-}
-details[open] > summary > .meme-row > .icon-plus {
-  transform: rotate(-45deg);
-}
+
