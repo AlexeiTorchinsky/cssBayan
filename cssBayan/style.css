@@ -20,11 +20,15 @@ label {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 0.1rem solid rgba(128, 128, 128, 0.8);
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 
 }
 label > span {
   opacity: 0;
 }
+
 .wrapper:hover label {
   color: black;
 
@@ -57,12 +61,14 @@ label > span {
 input:checked +  label {
   color: black;
 }
-input:checked +  label > span {
+input:checked +  label > span,
+label:hover > span {
   transform: rotate(-45deg);
   transition-duration: 0.3s;
   opacity: 1;
 }
-input:checked + label + .meme-img-container {
+input:checked + label + .meme-img-container,
+label:hover + div {
   height: auto;
   padding: 20px 0 0;
 }
