@@ -1,0 +1,126 @@
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: blanchedalmond;
+}
+.wrapper {
+  max-width: 32rem;
+  margin:  0 auto;
+}
+.meme {
+  max-width: 32rem;
+  margin: 0 auto;
+}
+input {
+  display: none;
+}
+label {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: blue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.1rem solid rgba(128, 128, 128, 0.8);
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+
+}
+
+label > span {
+  opacity: 0;
+}
+
+.icon-plus {
+  width: 2rem;
+  height: 2rem;
+}
+
+.meme-img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+
+}
+.meme-img-container {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  max-width: 32rem;
+}
+.meme-img-container-last {
+  margin-bottom: 32rem;
+}
+input:checked +  label {
+  color: black;
+}
+input:checked + label > span {
+  transform: rotate(-45deg);
+  transition: transform 0.3s;
+  opacity: 1;
+  }
+input:checked + label {
+  border-bottom: none;
+}
+
+input:checked + label + .meme-img-container{
+height: auto;
+padding: 1.25rem 0 0;
+}
+
+@media screen and (min-width: 820px) {
+  .wrapper:hover label {
+    color: black;
+    cursor: pointer;
+  }
+  .wrapper:hover label span{
+    opacity: 1;
+  }
+  .wrapper:hover label:active {
+    color: blue;
+  }
+  .wrapper:hover label:active > span {
+    fill: blue;
+  }
+  label:hover {
+    border-bottom: none;
+  }
+  input:checked +  label > span,
+  label:hover > span {
+  transform: rotate(-45deg);
+  transition-duration: 0.3s;
+  opacity: 1;
+  }
+  input:checked + label + .meme-img-container,
+  label:hover + div {
+  height: auto;
+  padding: 1.25rem 0 0;
+  cursor: pointer;
+  }
+}
+@media screen and (max-width: 819px) {
+  h1 {
+    font-size: 1.875rem;
+  }
+  label {
+    font-size: 1.2rem;
+  }
+  .icon-plus {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+@media screen and (max-width: 530px){
+  .wrapper {
+    padding: 0 0.7rem;
+  }
+}
+@media screen and (max-width: 320px){
+  h1 {
+    font-size: 1.5rem;
+  }
+  label {
+    font-size: 1rem;
+  }
+}
+
+
